@@ -1,0 +1,78 @@
+<div>
+  <style>
+  .dialog_box{
+    width: 400px;
+    max-width: 100%;
+    }
+    .md-dialog-content{
+      padding-top: 0 !important;
+    }
+    @media(max-width: 540px){
+        .dialog_box{
+          max-width: 90%;
+          }
+    }
+    @media(max-width: 440px){
+        .dialog_box{
+          max-width: 70%;
+          margin-left: 15%;
+          }
+          .md-dialog-content{
+            width: 90% !important;
+            max-width: 90% !important;
+            font-size: 0.8em;
+            padding-left: 5px !important;
+
+          }
+    }
+  </style>
+
+<md-dialog class = "dialog_box">
+    <form ng-cloak>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h1>Game Characterstics</h1>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="close()">
+                    <i class="fa fa-times fa-lg"></i>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+          <md-tabs md-dynamic-height md-border-bottom>
+           <md-tab label="Level"> 
+            <md-content >
+            <div class="md-dialog-content">
+
+                <h3>Game Level:</h3>
+                <md-radio-group ng-model="speed" layout="row">
+
+                  <md-radio-button value="Beginner" class="md-primary">Beginner</md-radio-button>
+                  <md-radio-button value="Amateur" class="md-primary">Amateur</md-radio-button>
+                  <md-radio-button value="Professional" class="md-primary">Professional</md-radio-button>
+
+                </md-radio-group>
+            </div>
+            <div ng-bind="sped"></div>
+            </md-content>
+         </md-tab>
+         <md-tab label="Instructions"> 
+            <md-content class="md-padding">
+
+            </md-content>
+         </md-tab>
+        </md-tabs> 
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row">
+            <md-button ng-click="cancel()">
+                Cancel
+            </md-button>
+            <md-button  md-no-ink class="md-primary" ng-click="confirmMode()">
+                Start Game
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>
+</div>

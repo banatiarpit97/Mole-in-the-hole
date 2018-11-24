@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+	<title>Mole in the hole</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link rel="stylesheet" href="libraries/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body ng-app = "moleGame" ng-controller="mainController">
+
+<md-whiteframe class="md-whiteframe-3dp whiteBack"  layout layout-align="center center">
+    <md-whiteframe class="md-whiteframe-8dp scoreframe"  layout layout-align="center center">
+        <div>Score : <span id="score">0</span></div>
+    </md-whiteframe>
+
+    <md-whiteframe class="md-whiteframe-8dp lives"  layout layout-align="center center">
+        <div><span ng-repeat = 'n in [1,2,3,4,5]' class="life"><i class="fa fa-heart"></i></span></div>
+    </md-whiteframe>
+
+    <!--<div class="timer hidden">3</div>-->
+</md-whiteframe>
+<div class="timer hidden">3</div>
+<div class="gameover hidden">GAME OVER</div>
+<div class="plus1 ">+1</div>
+<div class="minus1">-1</div>
+
+
+<img src="images/Mole.png" alt="mole" id="mole" class="hidden">
+<img src="images/Dirt.png" alt="mole" id="dirt" class="hole hole1">
+<img src="images/Dirt.png" alt="mole" id="dirt" class="hole hole2">
+<img src="images/Dirt.png" alt="mole" id="dirt" class="hole hole3">
+<img src="images/Dirt.png" alt="mole" id="dirt" class="hole hole4">
+<img src="images/Dirt.png" alt="mole" id="dirt" class="hole hole5">
+<img src="images/Dirt.png" alt="mole" id="dirt" class="hole hole6">
+<img src="images/Dirt.png" alt="mole" id="dirt" class="hole hole7">
+<img src="images/Dirt.png" alt="mole" id="dirt" class="hole hole8">
+
+<img src="images/hammer.png" alt="hammer" id="hammer" >
+
+<md-content class="btn-content">
+    <md-button class="md-raised md-primary startbtn" ng-click="start($event)">Start Game</md-button>
+    <!-- <md-button class="md-raised md-primary pausebtn hidden" ng-click="pause()">Pause</md-button> -->
+    <md-button class="md-raised md-primary restartbtn hidden" ng-click="restart()">Restart Game</md-button>
+</md-content>
+
+
+
+
+  <!--Script FIles included here -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+  <script src = "js/main.js"></script>
+  <!--Script FIles included here -->
+
+	
+</body>
+
+</html>

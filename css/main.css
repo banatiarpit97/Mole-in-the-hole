@@ -1,0 +1,200 @@
+body{
+    /*background-color: #a9793c;*/
+    /*box-shadow:inset 0px 0px 0px 10px #8B4513;*/
+    /*cursor: url("../images/h1.png"), auto;*/
+    /*cursor: none;*/
+}
+*{
+    user-select: none;
+}
+.whiteBack{
+    cursor: none;
+    height: 90%;
+    width: 90%;
+    margin: 0 auto;
+    background: url("../images/background.jpg") no-repeat center center;
+    /*background-position: center;*/
+    background-size: 100% 100%;
+    position: relative;
+    filter: brightness(0.9);
+}
+.hole{
+    cursor: none;
+    height: 90px;
+    width: 150px;
+    position: absolute;
+    opacity: 0.9;
+}
+.hole1{
+    left: 12%;
+    bottom: 14%;
+}
+.hole2{
+    left: 43%;
+    bottom: 14%;
+}
+.hole3{
+    left: 71%;
+    bottom: 14%;
+}
+.hole4{
+    left: 28%;
+    bottom: 32%;
+    height: 80px;
+    width: 140px;
+}
+.hole5{
+    left: 59%;
+    bottom: 32%;
+    height: 80px;
+    width: 140px;
+}
+.hole6{
+    left: 45%;
+    bottom: 43%;
+    width: 130px;
+    height: 70px;
+}
+.hole7{
+    left: 9%;
+    bottom: 39%;
+    width: 130px;
+    height: 70px;
+}
+.hole8{
+    left: 80%;
+    bottom: 40%;
+    width: 130px;
+    height: 70px;
+}
+
+#mole{
+    cursor: none;
+    position: absolute;
+    height: 115px;
+    width: 106px;
+    z-index: 1;
+    left: 13.5%;
+    bottom: 20%;
+}
+@keyframes hammer {
+    /*0% {transform: rotate(45deg)}*/
+    75% {transform: rotate(-45deg)}
+    100% {transform: rotate(0deg)}
+}
+
+@keyframes moleentry1 {
+    0% {height: 0px; z-index: 0;opacity: 0.5}
+    100% {height: 115px;z-index: 1;opacity: 1}
+}
+@keyframes moleentry2 {
+    0% {height: 0px; z-index: 0;opacity: 0.5}
+    100% {height: 105px;z-index: 1;opacity: 1}
+}
+@keyframes moleentry3 {
+    0% {height: 0px; z-index: 0;opacity: 0.5}
+    100% {height: 96px;z-index: 1;opacity: 1}
+}
+@keyframes moleexit {
+    0% {z-index: 1;opacity: 1}
+    100% {height: 0px;z-index: 0;opacity: 0.5}
+}
+@keyframes hit1 {
+    20% {height: 115px;transform:rotate(-10deg);z-index: 1;opacity: 1}
+    50% {height: 115px;transform: rotate(10deg);z-index: 1;opacity: 1}
+    100% {height: 0px;z-index: 0;opacity: 0.5}
+}
+@keyframes hit2 {
+    20% {height: 105px;transform:rotate(-10deg);z-index: 1;opacity: 1}
+    50% {height: 105px;transform: rotate(10deg);z-index: 1;opacity: 1}
+    100% {height: 0px;z-index: 0;opacity: 0.5}
+}
+@keyframes hit3 {
+    20% {height: 96px;transform:rotate(-10deg);z-index: 1;opacity: 1}
+    50% {height: 96px;transform: rotate(10deg);z-index: 1;opacity: 1}
+    100% {height: 0px;z-index: 0;opacity: 0.5}
+}
+#hammer{
+    height: 60px;
+    position: absolute;
+    z-index: 15;
+    pointer-events: none;
+    /*visibility: hidden;*/
+ }
+.btn-content{
+    text-align: center;
+    background-color: transparent;
+    margin-top: 1%;
+}
+.startbtn{
+    font-size: 1.5em;
+    font-weight: bold;
+    font-style: italic;
+}
+.pausebtn{
+    font-size: 1.5em;
+    font-weight: bold;
+    font-style: italic;
+    background-color: #D3EDF7 !important;
+    color: black!important;
+}
+.restartbtn{
+    font-size: 1.5em;
+    font-weight: bold;
+    font-style: italic;
+    background-color: #f1e19f !important;
+    color: black!important;
+}
+.scoreframe{
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    padding: 0.5%;
+    font-size: 1.5em;
+}
+.lives{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    border-radius: 5px;
+    background-color: white;
+    padding: 0.5%;
+    font-size: 2em;
+}
+.life{
+    color: red;
+    margin-right: 5px;
+}
+.timer{
+    font-size: 13em;
+    z-index: 10;
+    color: black;
+    position: absolute;
+    top: 26%;
+    left: 46%;
+}
+.gameover{
+    font-size: 8em;
+    z-index: 10;
+    color: black;
+    position: absolute;
+    top: 26%;
+    width: 100%;
+    text-align: center;
+}
+.plus1, .minus1{
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.3em;
+ }
+.plus1{
+    color: red;
+    top: 9%;
+    left: 14.5%;
+}
+.minus1{
+    top: 10%;
+    right: 9%;
+}
